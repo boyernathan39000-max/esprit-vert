@@ -1,0 +1,375 @@
+
+.marque__logo {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--c-blanc);
+  box-shadow: 0 4px 14px -6px rgba(27, 42, 18, .45);
+  object-fit: cover;
+}
+.pied .marque__logo { width: 52px; height: 52px; }
+
+.souligne {
+  text-decoration: underline;
+  text-decoration-color: var(--c-vert-accent);
+  text-decoration-thickness: .12em;
+  text-underline-offset: .14em;
+  text-decoration-skip-ink: none;
+}
+
+.hero--centre {
+  min-height: min(100vh, 980px);
+  align-items: stretch;
+  padding-block: calc(var(--l-header) + var(--sp-12)) var(--sp-10);
+}
+.hero--centre .hero__image { object-position: center 50%; }
+.hero--centre .hero__fond::after {
+  background:
+    radial-gradient(62% 48% at 50% 40%, rgba(20, 32, 13, .58), rgba(20, 32, 13, .18) 100%),
+    linear-gradient(to top, rgba(20, 32, 13, .7), transparent 42%);
+}
+.hero__grille {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: var(--sp-12);
+  width: 100%;
+}
+.hero--centre .hero__contenu {
+  align-self: center;
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+}
+.hero--centre .hero__titre { max-width: none; }
+.hero--centre .hero__texte { max-width: 640px; margin-inline: auto; }
+.hero--centre .hero__actions { justify-content: center; }
+
+.hero__bas {
+  display: grid;
+  grid-template-columns: minmax(0, 500px) 340px;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  align-items: stretch;
+}
+.hero__atouts,
+.hero__contact {
+  margin: 0;
+  border: 1px solid var(--v-verre-bord);
+  border-radius: var(--r-2xl);
+  background: rgba(253, 253, 252, .82);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--sh-flottant);
+  color: var(--c-encre);
+}
+.hero__atouts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  padding: var(--sp-6) 0;
+  list-style: none;
+}
+.hero__atout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  padding-inline: var(--sp-4);
+  text-align: center;
+}
+.hero__atout + .hero__atout { border-inline-start: 1px solid var(--c-trait); }
+.hero__atout-icone {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--c-vert);
+  color: var(--c-blanc);
+  box-shadow: 0 10px 22px -12px rgba(27, 42, 18, .7);
+}
+.hero__atout-icone svg { width: 26px; height: 26px; }
+.hero__atout-titre {
+  display: block;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-noir);
+  line-height: 1.2;
+  letter-spacing: var(--ls-sous-titre);
+}
+.hero__contact { padding: var(--sp-6); }
+.hero__contact .surtitre { margin: 0; }
+.hero__contact-texte { margin-block-start: var(--sp-2); font-size: var(--fs-md); line-height: 1.45; }
+.hero__contact-pied { display: flex; align-items: center; gap: var(--sp-3); margin-block-start: var(--sp-4); }
+.hero__contact-nom { font-size: var(--fs-sm); font-weight: var(--fw-demi); }
+.pastille-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--c-blanc);
+  border: 1px solid var(--c-trait);
+}
+.hero__tel {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-gras);
+  color: var(--c-vert);
+  text-decoration: none;
+}
+.hero__tel:hover { text-decoration: underline; }
+
+@media (max-width: 1100px) {
+  .hero__bas { grid-template-columns: minmax(0, 1fr); justify-content: stretch; }
+  .hero--centre { padding-block-start: calc(var(--l-header) + var(--sp-8)); }
+}
+@media (max-width: 760px) {
+  .hero__atouts { padding: var(--sp-5) 0; }
+  .hero__atout { padding-inline: var(--sp-2); }
+  .hero__atout-icone { width: 46px; height: 46px; }
+  .hero__atout-titre { font-size: var(--fs-sm); }
+  .hero--centre .hero__actions .bouton { width: 100%; }
+}
+
+.grille--prestations .carte-photo { aspect-ratio: 4 / 4.4; }
+@media (max-width: 860px) {
+  .grille--prestations .carte-photo { aspect-ratio: 4 / 3; }
+}
+
+.visuel--4x5 { aspect-ratio: 4 / 5; }
+.projets--galerie {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sp-10) var(--sp-6);
+  margin-block-start: var(--sp-10);
+}
+.projets--galerie .projet__titre { margin-block-start: var(--sp-4); font-size: var(--fs-md); }
+.projets--galerie .projet :is(.visuel, .visuel-photo) {
+  border-radius: var(--r-lg);
+  transition: transform var(--tr-rapide, .25s) ease;
+}
+@media (hover: hover) {
+  .projets--galerie .projet:hover .visuel-photo { transform: translateY(-4px); }
+}
+.projets--galerie[data-replie='true'] .projet:nth-child(n + 9) { display: none; }
+.realisations-plus {
+  display: flex;
+  justify-content: center;
+  margin-block-start: var(--sp-12);
+}
+@media (max-width: 1100px) {
+  .projets--galerie { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .projets--galerie[data-replie='true'] .projet:nth-child(n + 7) { display: none; }
+}
+@media (max-width: 700px) {
+  .projets--galerie { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-8) var(--sp-4); }
+  .projets--galerie .projet__titre { font-size: var(--fs-sm); }
+}
+
+.appel__actions { display: flex; flex-wrap: wrap; gap: var(--sp-4); }
+.bouton--verre {
+  background: rgba(253, 253, 252, .12);
+  border-color: rgba(253, 253, 252, .5);
+  color: var(--c-blanc);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.bouton--verre:hover { background: rgba(253, 253, 252, .24); }
+
+.artisan {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+}
+.artisan__photo { position: relative; margin: 0; }
+.artisan__photo .visuel-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-2xl);
+  box-shadow: var(--sh-flottant);
+}
+.artisan__legende {
+  position: absolute;
+  inset-inline-start: var(--sp-5);
+  inset-block-end: var(--sp-5);
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--r-pill);
+  background: rgba(253, 253, 252, .9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-demi);
+  color: var(--c-encre);
+}
+.artisan__texte { padding-block-start: var(--sp-4); }
+.artisan__texte .section-titre { margin-block-start: var(--sp-4); }
+.artisan__paragraphe {
+  margin-block-start: var(--sp-5);
+  font-size: var(--fs-md);
+  line-height: var(--lh-large);
+  color: var(--c-encre-douce);
+  max-width: 58ch;
+}
+.artisan__texte .artisan__paragraphe:first-of-type { margin-block-start: var(--sp-8); }
+.artisan__atouts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-4);
+  margin-block-start: var(--sp-10);
+}
+.artisan__atout {
+  padding: var(--sp-6);
+  border: 1px solid var(--c-trait);
+  border-radius: var(--r-lg);
+  background: var(--c-blanc);
+  box-shadow: var(--sh-carte);
+}
+.artisan__atout-titre {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-noir);
+  letter-spacing: var(--ls-sous-titre);
+  color: var(--c-vert);
+}
+.artisan__atout-texte {
+  margin-block-start: var(--sp-2);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-texte);
+  color: var(--c-encre-douce);
+}
+.artisan__citation {
+  margin: var(--sp-10) 0 0;
+  padding-inline-start: var(--sp-5);
+  border-inline-start: 3px solid var(--c-vert-accent);
+}
+.artisan__citation blockquote {
+  margin: 0;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-demi);
+  line-height: 1.45;
+  color: var(--c-encre);
+}
+.artisan__citation figcaption {
+  margin-block-start: var(--sp-2);
+  font-size: var(--fs-xs);
+  color: var(--c-encre-douce);
+}
+
+.artisan__terrain {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: var(--sp-6);
+  margin-block-start: var(--sp-16);
+}
+.artisan__vignette { margin: 0; }
+.artisan__vignette .visuel-photo,
+.artisan__vignette .photo-a-prevoir__cadre {
+  width: 100%;
+  height: 340px;
+  border-radius: var(--r-xl);
+  object-fit: cover;
+}
+.artisan__vignette figcaption {
+  margin-block-start: var(--sp-3);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-demi);
+  color: var(--c-encre);
+}
+
+.photo-a-prevoir__cadre {
+  display: grid;
+  place-content: center;
+  gap: var(--sp-3);
+  padding: var(--sp-8);
+  border: 2px dashed var(--c-encre-claire);
+  background: var(--c-creme);
+  text-align: center;
+}
+.photo-a-prevoir__titre {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-gras);
+  letter-spacing: var(--ls-capitales);
+  text-transform: uppercase;
+  color: var(--c-vert);
+}
+.photo-a-prevoir__texte {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-texte);
+  color: var(--c-encre-douce);
+  max-width: 26ch;
+  margin-inline: auto;
+}
+
+@media (max-width: 1024px) {
+  .artisan { grid-template-columns: minmax(0, 1fr); }
+  .artisan__photo { max-width: 520px; }
+  .artisan__atouts { grid-template-columns: minmax(0, 1fr); }
+  .artisan__terrain { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .artisan__vignette--large { grid-column: 1 / -1; order: -1; }
+}
+@media (max-width: 560px) {
+  .artisan__terrain { grid-template-columns: minmax(0, 1fr); }
+  .artisan__vignette .visuel-photo,
+  .artisan__vignette .photo-a-prevoir__cadre { height: 260px; }
+}
+
+.avis-liste {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-6);
+  margin-block-start: var(--sp-12);
+}
+.avis-carte {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  margin: 0;
+  padding: var(--sp-8);
+  border: 1px solid var(--c-trait);
+  border-radius: var(--r-xl);
+  background: var(--c-blanc);
+  box-shadow: var(--sh-carte);
+}
+.avis-carte .etoiles { color: #F5B70A; }
+.avis-carte .etoiles svg { width: 22px; height: 22px; }
+.avis-carte__texte {
+  margin: 0;
+  font-size: var(--fs-md);
+  line-height: var(--lh-large);
+  color: var(--c-encre);
+}
+.avis-carte__auteur { display: grid; gap: 2px; margin-block-start: auto; }
+.avis-carte__nom { font-size: var(--fs-sm); font-weight: var(--fw-demi); }
+.avis-carte__date { font-size: var(--fs-xs); color: var(--c-encre-douce); }
+.avis-carte--reservee {
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  border: 2px dashed var(--c-encre-claire);
+  background: transparent;
+  box-shadow: none;
+  text-align: center;
+}
+.avis-carte--reservee .etoiles { color: var(--c-trait); }
+.avis-carte__reserve { font-size: var(--fs-sm); color: var(--c-encre-douce); }
+.avis-action { display: flex; justify-content: center; margin-block-start: var(--sp-10); }
+@media (max-width: 860px) {
+  .avis-liste { grid-template-columns: minmax(0, 1fr); }
+  .avis-carte--reservee { min-height: 120px; }
+  .avis-carte--reservee:nth-child(n + 2) { display: none; }
+}
+
+.carte-zone {
+  margin-block-start: var(--sp-8);
+  overflow: hidden;
+  border-radius: var(--r-2xl);
+  box-shadow: var(--sh-carte);
+}
+.carte-zone iframe { display: block; width: 100%; height: 380px; border: 0; }
+.pratique__valeur a { color: inherit; }
+
+.artisan__photo .photo-a-prevoir__cadre {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-2xl);
+}
+.artisan__photo .photo-a-prevoir__titre { font-size: var(--fs-md); }
+.artisan__photo .photo-a-prevoir__texte { font-size: var(--fs-md); max-width: 30ch; }

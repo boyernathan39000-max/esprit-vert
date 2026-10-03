@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Esprit Vert — paysagiste et élagueur à Cussy-en-Morvan</title>
+<meta name="description" content="Julien, paysagiste à Cussy-en-Morvan (71) : tonte, taille de haies et d'arbustes, débroussaillage, élagage, abattage et petite création. Devis gratuit au 06 44 35 93 60.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="L'Esprit Vert — le soin de votre extérieur">
+<meta property="og:description" content="Entretien et aménagement de vos espaces verts autour de Cussy-en-Morvan. Devis gratuit.">
+<meta property="og:image" content="assets/img/s09-hero-pelouse.webp">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="assets/logo/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/apparitions.css">
+<link rel="stylesheet" href="css/esprit-vert.css">
+<script>
+/* Drapeau d'animation posé avant le premier rendu (voir css/apparitions.css).
+   Filet de sécurité : sans signal de js/apparitions.js, tout redevient visible. */
+(function () {
+  var r = document.documentElement;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  r.dataset.anim = 'oui';
+  addEventListener('load', function () {
+    setTimeout(function () {
+      if (!r.dataset.animPrete) r.removeAttribute('data-anim');
+    }, 1000);
+  });
+})();
+</script>
+</head>
+<body>
+<a class="evitement" href="#principal">Aller au contenu</a>
+
+<header class="entete" id="entete" data-fond="sombre">
+  <div class="entete__interieur">
+    <a class="marque" href="#haut" aria-label="L'Esprit Vert, retour en haut">
+      <img class="marque__logo" src="assets/logo/logo.webp" width="240" height="240" alt="">
+      <span class="marque__nom">L'Esprit Vert</span>
+    </a>
+
+    <nav class="nav" id="menu" aria-label="Navigation principale">
+      <a class="nav__lien" href="#prestations">Prestations</a>
+      <a class="nav__lien" href="#realisations">Réalisations</a>
+      <a class="nav__lien" href="#artisan">À propos</a>
+      <a class="nav__lien" href="#avis">Avis</a>
+      <a class="nav__lien" href="#contact">Contact</a>
+      <div class="nav__action"><a class="bouton bouton--plein bouton--large" href="#contact">Demander un devis</a></div>
+    </nav>
+
+    <div class="entete__action">
+      <a class="bouton bouton--entete" href="#contact">Devis gratuit</a>
+    </div>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+      <span class="burger__trait"></span><span class="burger__trait"></span><span class="burger__trait"></span>
+    </button>
+  </div>
+</header>
+
+<main id="principal">
+
+<section class="hero hero--centre" id="haut">
+  <img class="hero__image" src="assets/img/s09-hero-pelouse.webp"
+       width="1494" height="933" fetchpriority="high" alt="">
+  <div class="hero__fond" aria-hidden="true"></div>
+
+  <div class="contenu hero__grille">
+    <div class="hero__contenu">
+      <p class="badge badge--verre hero__badge">Paysagiste à Cussy-en-Morvan</p>
+      <h1 class="hero__titre">Le soin de votre extérieur</h1>
+      <p class="hero__texte">
+        Entretien et aménagement de vos espaces verts : tonte, taille, débroussaillage,
+        élagage et petite création.
+      </p>
+      <div class="hero__actions">
+        <a class="bouton bouton--plein" href="#contact">Demander un devis</a>
+        <a class="bouton bouton--creme" href="tel:+33644359360">06 44 35 93 60</a>
+      </div>
+    </div>
+
+    <div class="hero__bas">
+      <ul class="hero__atouts" aria-label="Pourquoi faire appel à L'Esprit Vert">
+        <li class="hero__atout">
+          <span class="hero__atout-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <span class="hero__atout-titre">Devis gratuit</span>
+        </li>
+        <li class="hero__atout">
+          <span class="hero__atout-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></span>
+          <span class="hero__atout-titre">Un seul interlocuteur</span>
+        </li>
+        <li class="hero__atout">
+          <span class="hero__atout-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7M12 15c-4 0-7-3-7-7a7 7 0 0114 0c0 4-3 7-7 7z"/></svg></span>
+          <span class="hero__atout-titre">Élagage et abattage</span>
+        </li>
+      </ul>
+
+      <aside class="hero__contact" aria-label="Contact direct">
+        <p class="surtitre">Contact direct</p>
+        <p class="hero__contact-texte">Un projet pour vos espaces verts&nbsp;? Contactez-moi.</p>
+        <div class="hero__contact-pied">
+          <img class="pastille-logo" src="assets/logo/logo.webp" width="240" height="240" alt="">
+          <span>
+            <span class="hero__contact-nom">Julien · L'Esprit Vert</span><br>
+            <a class="hero__tel" href="tel:+33644359360">06 44 35 93 60</a>
+          </span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section--creme section--bande">
+  <div class="bandeau bandeau--hero" role="group" aria-label="Les avantages de L'Esprit Vert">
+    <div class="bandeau__piste">
+      <div class="bandeau__groupe">
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg>Conseils et réponses à vos questions</span>
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1L20 20M8.1 15.9L20 4"/></svg>Pelouse, haies et arbres&nbsp;: un seul artisan</span>
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7M12 15c-4 0-7-3-7-7a7 7 0 0114 0c0 4-3 7-7 7z"/></svg>Élagage en grimpe</span>
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>Mise en sécurité des arbres</span>
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6-7-10a7 7 0 0114 0c0 4-3 7-7 10z"/><circle cx="12" cy="11" r="2.4"/></svg>Artisan installé à Cussy-en-Morvan</span>
+      </div>
+      <div class="bandeau__groupe" aria-hidden="true">
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg>Conseils et réponses à vos questions</span>
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1L20 20M8.1 15.9L20 4"/></svg>Pelouse, haies et arbres&nbsp;: un seul artisan</span>
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7M12 15c-4 0-7-3-7-7a7 7 0 0114 0c0 4-3 7-7 7z"/></svg>Élagage en grimpe</span>
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>Mise en sécurité des arbres</span>
+        <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6-7-10a7 7 0 0114 0c0 4-3 7-7 10z"/><circle cx="12" cy="11" r="2.4"/></svg>Artisan installé à Cussy-en-Morvan</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--creme" id="prestations">
+  <div class="contenu">
+    <div class="section-entete">
+      <p class="badge badge--accent">Mes prestations</p>
+      <h2 class="section-titre">Entretien et aménagement de vos <span class="souligne">espaces verts</span></h2>
+    </div>
+
+    <div class="grille grille--3 grille--prestations">
+      <article class="carte-photo">
+        <img class="visuel-photo visuel--pleine" src="assets/img/s02-tonte.webp" width="1200" height="899" loading="lazy"
+             alt="Grande pelouse tondue au pied d'une haie taillée, ciel bleu">
+        <div>
+          <h3 class="carte-photo__titre">Tonte</h3>
+          <p class="carte-photo__texte">Tonte de pelouse et entretien régulier de vos espaces verts.</p>
+        </div>
+      </article>
+      <article class="carte-photo">
+        <img class="visuel-photo visuel--pleine" src="assets/img/s13-taille.webp" width="1200" height="899" loading="lazy"
+             alt="Arbuste taillé en plateaux superposés dans une cour">
+        <div>
+          <h3 class="carte-photo__titre">Taille</h3>
+          <p class="carte-photo__texte">Taille de haies et d'arbustes, entretien de vos plantations.</p>
+        </div>
+      </article>
+      <article class="carte-photo">
+        <img class="visuel-photo visuel--pleine" src="assets/img/s10-debroussaillage.webp" width="1200" height="900" loading="lazy"
+             alt="Bande de terrain dégagée et replantée le long d'un mur crépi">
+        <div>
+          <h3 class="carte-photo__titre">Débroussaillage</h3>
+          <p class="carte-photo__texte">Débroussaillage et remise en état des terrains et espaces verts.</p>
+        </div>
+      </article>
+      <article class="carte-photo">
+        <img class="visuel-photo visuel--pleine" src="assets/img/s03-elagage.webp" width="1200" height="899" loading="lazy"
+             alt="Nacelle déployée dans la couronne d'un grand arbre">
+        <div>
+          <h3 class="carte-photo__titre">Élagage</h3>
+          <p class="carte-photo__texte">Travaux d'élagage et entretien des arbres.</p>
+        </div>
+      </article>
+      <article class="carte-photo">
+        <img class="visuel-photo visuel--pleine" src="assets/img/s04-abattage.webp" width="1200" height="899" loading="lazy"
+             alt="Fendeuse à bois et tas de bûches fendues dans un jardin">
+        <div>
+          <h3 class="carte-photo__titre">Abattage et démontage</h3>
+          <p class="carte-photo__texte">Mise en sécurité, abattage et démontage des arbres.</p>
+        </div>
+      </article>
+      <article class="carte-photo">
+        <img class="visuel-photo visuel--pleine" src="assets/img/s06-creation.webp" width="1200" height="900" loading="lazy"
+             alt="Massif courbe paillé avec bordure, ouvert sur les prés du Morvan">
+        <div>
+          <h3 class="carte-photo__titre">Petite création</h3>
+          <p class="carte-photo__texte">Petite création des extérieurs.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--creme section--haut-nul">
+  <div class="contenu">
+    <div class="confiance">
+      <p class="badge badge--accent">Julien, artisan paysagiste</p>
+      <h2 class="confiance__titre">Je vous accompagne du début à la fin du chantier.</h2>
+      <a class="bouton bouton--plein" href="#contact">Demander un devis gratuit</a>
+      <div class="avatars" aria-hidden="true">
+        <img class="visuel-photo visuel--rond" src="assets/img/s13-vignette.webp" width="400" height="400" loading="lazy" alt="">
+        <img class="visuel-photo visuel--rond" src="assets/img/f2-vignette.webp" width="400" height="400" loading="lazy" alt="">
+        <img class="visuel-photo visuel--rond" src="assets/img/s03-vignette.webp" width="400" height="400" loading="lazy" alt="">
+        <img class="visuel-photo visuel--rond" src="assets/img/s06-vignette.webp" width="400" height="400" loading="lazy" alt="">
+      </div>
+      <p class="confiance__mention">Secteur de Cussy-en-Morvan et alentours</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--creme-2" id="realisations">
+  <div class="contenu">
+    <div class="section-entete">
+      <p class="badge badge--accent">Réalisations</p>
+      <h2 class="section-titre">Mes chantiers en images</h2>
+      <p class="section-chapo">Quelques exemples de mes travaux d'entretien et d'aménagement d'espaces verts.</p>
+    </div>
+
+    <div class="filtres" role="group" aria-label="Filtrer les réalisations par type de travaux">
+      <button class="filtre" type="button" aria-pressed="true" data-filtre="tous">Tout</button>
+      <button class="filtre" type="button" aria-pressed="false" data-filtre="taille">Taille</button>
+      <button class="filtre" type="button" aria-pressed="false" data-filtre="tonte">Tonte</button>
+      <button class="filtre" type="button" aria-pressed="false" data-filtre="elagage">Élagage · abattage</button>
+      <button class="filtre" type="button" aria-pressed="false" data-filtre="creation">Création</button>
+    </div>
+
+    <p class="visuellement-cache" role="status" id="compte-resultats"></p>
+
+    <div class="projets projets--galerie" id="projets" data-replie="true">
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/f1-galerie.webp" width="900" height="1125" loading="lazy" alt="Haie variée taillée en boules au bord d'une pelouse, collines boisées au fond">
+        <h3 class="projet__titre">Taille en boules</h3>
+        <p class="projet__meta">Taille · Moux-en-Morvan</p>
+      </article>
+      <article class="projet" data-categories="elagage">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s08-galerie.webp" width="900" height="1124" loading="lazy" alt="Grimpeur en haut d'un tronc ébranché, corde tendue, ciel bleu">
+        <h3 class="projet__titre">Démontage d'un arbre</h3>
+        <p class="projet__meta">Élagage</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s13-galerie.webp" width="900" height="1124" loading="lazy" alt="Arbuste taillé en plateaux superposés dans une cour">
+        <h3 class="projet__titre">Taille en plateaux</h3>
+        <p class="projet__meta">Taille</p>
+      </article>
+      <article class="projet" data-categories="tonte">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s09-galerie.webp" width="900" height="1124" loading="lazy" alt="Pelouse tondue en bandes devant une haie">
+        <h3 class="projet__titre">Tonte de pelouse</h3>
+        <p class="projet__meta">Tonte</p>
+      </article>
+      <article class="projet" data-categories="creation">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s06-galerie.webp" width="900" height="1125" loading="lazy" alt="Massif courbe paillé avec bordure, ouvert sur les prés">
+        <h3 class="projet__titre">Massif paillé</h3>
+        <p class="projet__meta">Petite création</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/f5-galerie.webp" width="900" height="1125" loading="lazy" alt="Haie taillée au carré sous de grands arbres">
+        <h3 class="projet__titre">Haie taillée au carré</h3>
+        <p class="projet__meta">Taille · Planchez</p>
+      </article>
+      <article class="projet" data-categories="elagage">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s03-galerie.webp" width="900" height="1124" loading="lazy" alt="Nacelle déployée dans un grand arbre">
+        <h3 class="projet__titre">Élagage en nacelle</h3>
+        <p class="projet__meta">Élagage</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s14-galerie.webp" width="900" height="1124" loading="lazy" alt="Arbre taillé en tête carrée dans un jardin de ville">
+        <h3 class="projet__titre">Arbre à tête carrée</h3>
+        <p class="projet__meta">Taille</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/f2-galerie.webp" width="900" height="1125" loading="lazy" alt="Haie variée taillée en boules, arbuste pourpre au centre">
+        <h3 class="projet__titre">Haie variée en boules</h3>
+        <p class="projet__meta">Taille · Moux-en-Morvan</p>
+      </article>
+      <article class="projet" data-categories="elagage">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s11-galerie.webp" width="900" height="1124" loading="lazy" alt="Vue depuis le haut d'un arbre coupé sur une vallée du Morvan">
+        <h3 class="projet__titre">Élagage en hauteur</h3>
+        <p class="projet__meta">Élagage</p>
+      </article>
+      <article class="projet" data-categories="creation">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s07-galerie.webp" width="900" height="1125" loading="lazy" alt="Massif paillé avec bordure de pierres et grandes poteries">
+        <h3 class="projet__titre">Massif et paillage</h3>
+        <p class="projet__meta">Petite création</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/f3-galerie.webp" width="900" height="1125" loading="lazy" alt="Haie de laurier taillée en pointe de jardin">
+        <h3 class="projet__titre">Haie de laurier</h3>
+        <p class="projet__meta">Taille · Moux-en-Morvan</p>
+      </article>
+      <article class="projet" data-categories="tonte taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s02-galerie.webp" width="900" height="1124" loading="lazy" alt="Pelouse tondue le long d'une longue haie taillée">
+        <h3 class="projet__titre">Pelouse et haie</h3>
+        <p class="projet__meta">Tonte · taille</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s12-galerie.webp" width="900" height="1124" loading="lazy" alt="Arbre taillé dans une cour entre des immeubles">
+        <h3 class="projet__titre">Taille en têtes de chat</h3>
+        <p class="projet__meta">Taille</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/f6-galerie.webp" width="900" height="1125" loading="lazy" alt="Haie taillée le long d'un mur de pierres et d'un chemin">
+        <h3 class="projet__titre">Haie le long d'un mur</h3>
+        <p class="projet__meta">Taille · Planchez</p>
+      </article>
+      <article class="projet" data-categories="creation">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s10-galerie.webp" width="900" height="1125" loading="lazy" alt="Arbustes plantés et paillés au pied d'un mur crépi">
+        <h3 class="projet__titre">Plantation au pied d'un mur</h3>
+        <p class="projet__meta">Petite création</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/f4-galerie.webp" width="900" height="1125" loading="lazy" alt="Escabeau devant un arbuste pourpre taillé en boule">
+        <h3 class="projet__titre">Arbuste pourpre en boule</h3>
+        <p class="projet__meta">Taille · Moux-en-Morvan</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s05-galerie.webp" width="900" height="1124" loading="lazy" alt="Haie taillée droite le long d'un trottoir">
+        <h3 class="projet__titre">Haie en bord de rue</h3>
+        <p class="projet__meta">Taille</p>
+      </article>
+      <article class="projet" data-categories="elagage">
+        <img class="visuel-photo visuel--4x5" src="assets/img/s04-galerie.webp" width="900" height="1124" loading="lazy" alt="Fendeuse à bois et tas de bûches fendues">
+        <h3 class="projet__titre">Bois coupé et fendu</h3>
+        <p class="projet__meta">Abattage</p>
+      </article>
+      <article class="projet" data-categories="taille">
+        <img class="visuel-photo visuel--4x5" src="assets/img/f7-galerie.webp" width="900" height="1125" loading="lazy" alt="Longue haie taillée sous de grands arbres">
+        <h3 class="projet__titre">Longue haie taillée</h3>
+        <p class="projet__meta">Taille · Planchez</p>
+      </article>
+    </div>
+
+    <p class="projets__vide" id="projets-vide" hidden>Aucune réalisation dans cette catégorie.</p>
+
+    <div class="realisations-plus">
+      <button class="bouton bouton--contour" type="button" id="realisations-plus">Voir toutes les réalisations</button>
+    </div>
+  </div>
+</section>
+
+<section class="section section--creme">
+  <div class="contenu">
+    <div class="appel">
+      <img class="visuel-photo visuel--pleine" src="assets/img/s07-appel.webp" width="1800" height="1012" loading="lazy"
+           alt="Massif paillé bordé de pierres, grandes poteries et arbre pleureur">
+      <div class="appel__contenu">
+        <p class="surtitre">Devis gratuit</p>
+        <h2 class="appel__titre">Un projet d'entretien ou d'aménagement&nbsp;?</h2>
+        <p class="appel__texte">Contactez-moi pour obtenir un devis gratuit.</p>
+        <div class="appel__action appel__actions">
+          <a class="bouton bouton--clair" href="tel:+33644359360">06 44 35 93 60</a>
+          <a class="bouton bouton--verre" href="#contact">Écrire un message
+            <svg class="bouton__fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--creme-2" id="artisan">
+  <div class="contenu">
+    <div class="artisan">
+      <figure class="artisan__photo photo-a-prevoir">
+        <div class="photo-a-prevoir__cadre">
+          <p class="photo-a-prevoir__titre">Photo de Julien</p>
+          <p class="photo-a-prevoir__texte">Portrait de Julien en tenue de travail, sur un de ses chantiers, regard vers l'objectif.</p>
+        </div>
+      </figure>
+
+      <div class="artisan__texte">
+        <p class="surtitre">À propos</p>
+        <h2 class="section-titre">Julien, <span class="souligne">paysagiste</span> et élagueur</h2>
+        <p class="artisan__paragraphe">
+          Je m'appelle Julien. J'ai créé L'Esprit Vert à Cussy-en-Morvan pour l'entretien
+          et l'aménagement de vos espaces verts.
+        </p>
+        <p class="artisan__paragraphe">
+          L'Esprit Vert est une entreprise récente. Je vous accompagne du début jusqu'à la fin
+          du chantier, avec des conseils et des réponses à vos questions.
+        </p>
+        <p class="artisan__paragraphe">
+          Je m'occupe de la tonte, de la taille de haies et d'arbustes, du débroussaillage, de
+          l'entretien de vos massifs et de vos allées, de la petite création et de l'élagage&nbsp;:
+          taille, mise en sécurité, abattage et démontage.
+        </p>
+
+        <div class="artisan__atouts">
+          <div class="artisan__atout">
+            <p class="artisan__atout-titre">Conseils</p>
+            <p class="artisan__atout-texte">Des réponses à vos questions</p>
+          </div>
+          <div class="artisan__atout">
+            <p class="artisan__atout-titre">Tout l'extérieur</p>
+            <p class="artisan__atout-texte">Pelouse, haies, massifs, allées et arbres</p>
+          </div>
+          <div class="artisan__atout">
+            <p class="artisan__atout-titre">Grimpe</p>
+            <p class="artisan__atout-texte">Élagage et démontage en hauteur</p>
+          </div>
+        </div>
+
+        <figure class="artisan__citation">
+          <blockquote>« Réception du matériel de grimpe, de quoi commencer une bonne saison d'élagage. »</blockquote>
+          <figcaption>Julien, sur la page Facebook de L'Esprit Vert</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="artisan__terrain">
+      <figure class="artisan__vignette">
+        <img class="visuel-photo" src="assets/img/s08-artisan-tronc.webp" width="900" height="1124" loading="lazy"
+             alt="Grimpeur en haut d'un tronc ébranché, encordé, ciel bleu">
+        <figcaption>En haut du tronc, en démontage</figcaption>
+      </figure>
+      <figure class="artisan__vignette artisan__vignette--large">
+        <img class="visuel-photo" src="assets/img/f8-artisan-materiel.webp" width="1200" height="900" loading="lazy"
+             alt="Cordes, harnais et matériel de grimpe neufs posés au sol">
+        <figcaption>Le matériel de grimpe</figcaption>
+      </figure>
+      <figure class="artisan__vignette">
+        <img class="visuel-photo" src="assets/img/s11-artisan-cime.webp" width="1100" height="1374" loading="lazy"
+             alt="Vue prise du haut d'un arbre coupé, sur une vallée du Morvan">
+        <figcaption>Vue depuis la cime d'un arbre</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--creme" id="avis">
+  <div class="contenu">
+    <div class="section-entete section-entete--centre">
+      <p class="badge badge--accent">Avis clients</p>
+      <h2 class="section-titre">Vos avis</h2>
+      <p class="section-chapo">Les avis de mes clients s'afficheront ici, au fil des chantiers.</p>
+    </div>
+
+        <div class="avis-liste" id="avis-liste">
+      <div class="avis-carte avis-carte--reservee">
+        <div class="etoiles" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg></div>
+        <p class="avis-carte__reserve">Emplacement réservé à un avis Google</p>
+      </div>
+      <div class="avis-carte avis-carte--reservee">
+        <div class="etoiles" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg></div>
+        <p class="avis-carte__reserve">Emplacement réservé à un avis Google</p>
+      </div>
+      <div class="avis-carte avis-carte--reservee">
+        <div class="etoiles" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9z"/></svg></div>
+        <p class="avis-carte__reserve">Emplacement réservé à un avis Google</p>
+      </div>
+    </div>
+
+    <p class="avis-action">
+      <a class="bouton bouton--plein" href="https://share.google/p1HNvNi1i0HG0bHJv" target="_blank" rel="noopener">Laisser un avis sur Google</a>
+    </p>
+  </div>
+</section>
+
+<section class="section section--creme section--haut-nul" id="contact">
+  <div class="contenu">
+    <div class="formulaire-bloc">
+      <img class="visuel-photo visuel--pleine" src="assets/img/f5-contact.webp" width="1400" height="1050" loading="lazy"
+           alt="">
+
+      <form class="formulaire" id="devis" novalidate>
+        <div class="formulaire__corps">
+          <h2 class="formulaire__titre">Demande de devis</h2>
+
+          <div class="champs">
+            <div class="champ champ--plein">
+              <label for="nom">Nom et prénom <span aria-hidden="true">*</span></label>
+              <input type="text" id="nom" name="nom" autocomplete="name" required aria-describedby="err-nom">
+              <p class="champ__erreur" id="err-nom">Indiquez votre nom.</p>
+            </div>
+
+            <div class="champ">
+              <label for="telephone">Téléphone <span aria-hidden="true">*</span></label>
+              <input type="tel" id="telephone" name="telephone" autocomplete="tel" required aria-describedby="err-telephone">
+              <p class="champ__erreur" id="err-telephone">Indiquez un numéro à dix chiffres.</p>
+            </div>
+
+            <div class="champ">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" autocomplete="email">
+            </div>
+
+            <div class="champ">
+              <label for="commune">Commune <span aria-hidden="true">*</span></label>
+              <input type="text" id="commune" name="commune" list="liste-communes" required aria-describedby="err-commune">
+              <datalist id="liste-communes">
+                <option value="Cussy-en-Morvan"></option>
+                <option value="Moux-en-Morvan"></option>
+                <option value="Planchez"></option>
+              </datalist>
+              <p class="champ__erreur" id="err-commune">Indiquez la commune des travaux.</p>
+            </div>
+
+            <div class="champ">
+              <label for="projet">Prestation <span aria-hidden="true">*</span></label>
+              <select id="projet" name="projet" required aria-describedby="err-projet">
+                <option value="">Choisissez</option>
+                <option>Tonte</option>
+                <option>Taille de haies et arbustes</option>
+                <option>Débroussaillage</option>
+                <option>Élagage</option>
+                <option>Abattage ou démontage</option>
+                <option>Petite création</option>
+                <option>Autre demande</option>
+              </select>
+              <p class="champ__erreur" id="err-projet">Choisissez une prestation.</p>
+            </div>
+
+            <div class="champ champ--plein">
+              <label for="description">Votre projet <span aria-hidden="true">*</span></label>
+              <textarea id="description" name="description" required minlength="10" aria-describedby="err-description"></textarea>
+              <p class="champ__erreur" id="err-description">Décrivez votre projet en une phrase.</p>
+            </div>
+          </div>
+
+          <div class="formulaire__pied">
+            <p class="formulaire__mention">Devis gratuit</p>
+            <button class="bouton bouton--plein" type="submit">Envoyer la demande</button>
+          </div>
+        </div>
+
+        <div class="formulaire__succes" role="status" aria-live="polite">
+          <div class="formulaire__succes-signe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>
+          </div>
+          <h3>Demande envoyée</h3>
+          <p id="succes-detail">Merci, je vous rappelle pour votre devis.</p>
+          <p style="margin-block-start: var(--sp-8)">
+            <button class="bouton bouton--contour" type="button" id="nouvelle-demande">Faire une autre demande</button>
+          </p>
+        </div>
+      </form>
+
+      <aside class="pratique">
+        <h2 class="pratique__titre">Me contacter</h2>
+        <div class="pratique__liste">
+          <div class="pratique__item">
+            <p class="pratique__intitule">Téléphone</p>
+            <p class="pratique__valeur"><a href="tel:+33644359360">06 44 35 93 60</a></p>
+          </div>
+          <div class="pratique__item">
+            <p class="pratique__intitule">E-mail</p>
+            <p class="pratique__valeur"><a href="mailto:lespritvert.71@gmail.com">lespritvert.71@gmail.com</a></p>
+          </div>
+          <div class="pratique__item">
+            <p class="pratique__intitule">Adresse</p>
+            <p class="pratique__valeur">8 La Forge, 71550 Cussy-en-Morvan</p>
+          </div>
+          <div class="pratique__item">
+            <p class="pratique__intitule">Zone d'intervention</p>
+            <p class="pratique__valeur">Secteur de Cussy-en-Morvan et alentours</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="carte-zone">
+      <iframe title="L'Esprit Vert sur la carte, Cussy-en-Morvan" loading="lazy"
+              src="https://www.google.com/maps?q=L%27Esprit%20Vert%2C%208%20La%20Forge%2C%2071550%20Cussy-en-Morvan&amp;z=11&amp;output=embed"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied">
+  <div class="contenu">
+    <div class="pied__haut">
+      <div>
+        <a class="marque" href="#haut" aria-label="L'Esprit Vert, retour en haut">
+          <img class="marque__logo" src="assets/logo/logo.webp" width="240" height="240" alt="">
+          <span class="marque__nom">L'Esprit Vert</span>
+        </a>
+        <p class="pied__accroche">Le soin de votre extérieur&nbsp;! Entretien de jardins et espaces verts à Cussy-en-Morvan.</p>
+      </div>
+
+      <div>
+        <p class="pied__titre">Prestations</p>
+        <ul class="pied__liste">
+          <li><a href="#prestations">Tonte</a></li>
+          <li><a href="#prestations">Taille de haies et arbustes</a></li>
+          <li><a href="#prestations">Débroussaillage</a></li>
+          <li><a href="#prestations">Élagage</a></li>
+          <li><a href="#prestations">Abattage et démontage</a></li>
+          <li><a href="#prestations">Petite création</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="pied__titre">Contact</p>
+        <ul class="pied__liste">
+          <li><a href="tel:+33644359360">06 44 35 93 60</a></li>
+          <li><a href="mailto:lespritvert.71@gmail.com">lespritvert.71@gmail.com</a></li>
+          <li>8 La Forge</li>
+          <li>71550 Cussy-en-Morvan</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="pied__titre">Le site</p>
+        <ul class="pied__liste">
+          <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#artisan">À propos</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#contact">Demander un devis</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61593407266160" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pied__bas">
+      <p>L'Esprit Vert — entreprise individuelle, paysagiste à Cussy-en-Morvan (Saône-et-Loire).</p>
+      <p>Maquette de démonstration · OBT Agency</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/apparitions.js"></script>
+<script src="js/main.js"></script>
+<script src="js/filtres.js"></script>
+<script src="js/formulaire.js"></script>
+</body>
+</html>
