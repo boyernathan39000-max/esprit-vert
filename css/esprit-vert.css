@@ -66,8 +66,8 @@
 .hero__atouts {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: center;
-  padding: var(--sp-6) 0;
+  align-content: center;
+  align-items: start;        padding: var(--sp-6) 0;
   list-style: none;
 }
 .hero__atout {
